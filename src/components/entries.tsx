@@ -10,6 +10,7 @@ import useStore from "~/hooks/use-store";
 // eslint-disable-next-line
 const AVOID_CLEANUP = () => {};
 
+// TODO: Support updating for full CRUD coverage
 export default function Entries() {
     const store = useStore("entries", "initialiseEntries");
     const [deletingEntryID, setDeletingEntryID] = useState(-1);
