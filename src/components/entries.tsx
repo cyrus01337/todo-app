@@ -8,7 +8,7 @@ import TrashIcon from "~/components/trash-icon";
 import useStore from "~/hooks/use-store";
 
 // eslint-disable-next-line
-const AVOID_CLEANUP = () => { };
+const AVOID_CLEANUP = () => {};
 
 // TODO: Support updating for full CRUD coverage
 export default function Entries() {
