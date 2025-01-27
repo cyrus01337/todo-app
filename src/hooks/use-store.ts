@@ -10,19 +10,13 @@ const DEFAULT_STATE = {
     entries: null as Entry[] | null,
 };
 
-const cacheEntries = (entries: Entry[]) => {
-    console.log("Saving entries to", entries);
-
+const cacheEntries = (entries: Entry[]) =>
     window.localStorage.setItem(LOCAL_STORAGE_ENTRIES_KEY, JSON.stringify(entries));
-};
-
 export const useInternalStore = create(
     combine(DEFAULT_STATE, set => ({
         initialiseEntries: () =>
             set(() => {
                 const entriesFound = window.localStorage.getItem(LOCAL_STORAGE_ENTRIES_KEY);
-
-                console.log("Entries:", entriesFound);
 
                 if (!entriesFound) {
                     const newEntries: Entry[] = [];

@@ -13,7 +13,7 @@ interface Properties {
 const NO_ENTRY_TO_DELETE = -1;
 
 // eslint-disable-next-line
-const AVOID_CLEANUP = () => {};
+const AVOID_CLEANUP = () => { };
 
 // TODO: Refactor using DaisyUI modal
 export default function EntryDeletionConfirmation({
@@ -31,8 +31,6 @@ export default function EntryDeletionConfirmation({
             event.target !== modalReference.current &&
             event.target !== cancelButtonReference.current
         ) {
-            console.log("Invoked");
-
             return;
         }
 

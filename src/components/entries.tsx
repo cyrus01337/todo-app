@@ -1,6 +1,6 @@
 "use client";
 
-import { MouseEventHandler, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import EntryCreator from "~/components/entry-creator";
 import EntryDeletionConfirmation from "~/components/entry-deletion-confirmation";
@@ -8,7 +8,7 @@ import TrashIcon from "~/components/trash-icon";
 import useStore from "~/hooks/use-store";
 
 // eslint-disable-next-line
-const AVOID_CLEANUP = () => {};
+const AVOID_CLEANUP = () => { };
 
 // TODO: Support updating for full CRUD coverage
 export default function Entries() {
@@ -27,8 +27,6 @@ export default function Entries() {
 
         return AVOID_CLEANUP;
     }, []);
-
-    console.log(deletingEntryID);
 
     // TODO: Add skeleton when no entries are present
     return (
