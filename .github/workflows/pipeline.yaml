@@ -55,9 +55,9 @@ jobs:
             - run: bun run build
 
             - name: Upload build artifacts
-              uses: actions/upload-artifact@v4
+              uses: actions/upload-pages-artifact@v3
               with:
-                  path: ./out/
+                  path: ./out
 
     deploy:
         name: Deploy to GitHub Pages
